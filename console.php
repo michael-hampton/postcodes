@@ -99,7 +99,7 @@ if (empty($arrPostcodes))
     die('No postcodes could be found');
 }
 
-//echo json_encode($arrPostcodes);
+echo json_encode($arrPostcodes);
 
 if($blDoImport) {
     $objPostcodeController->import($blPartial);
