@@ -17,6 +17,8 @@ adding import as the last argument will import all the postcodes found from the 
 for example
 php console.php getAllPostcodes import - imports all postcodes found from the getAllPostcodes method
 
+To create the database table you need to run the db.sql file
+
 To save to the database you need to enter your db credentials into the config/Config.php file
 
 
