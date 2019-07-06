@@ -66,8 +66,6 @@ class Import implements ImportInterface {
             return false;
         }
 
-        die('good');
-
         return true;
     }
 
@@ -81,8 +79,6 @@ class Import implements ImportInterface {
         try {
             $stmt = $this->connection->prepare($this->query_string);
             $stmt->execute($this->arrParams);
-
-            die('Mike');
         } catch (Exception $ex) {
 
             $this->arrErrors[] = 'Unable to add to database';

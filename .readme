@@ -1,0 +1,25 @@
+Methods
+getAllPostcodes returns a list of postcodes (currently one random one)
+getNearestPostcodesFromLongLat find postcode by latitude and longitude
+getPartial searches for a postcode based on a partial text string eg BH25
+
+to run in the console enter
+php console.php (**METHOD NAME**)
+where **METHOD NAME** is the method from above followed by the arguments
+
+examples
+php console.php getNearestPostcodesFromLongLat -1.647370 50.748600
+php console.php getPartial BH25
+php console.php getAllPostcodes
+
+adding import as the last argument will import all the postcodes found from the method you run
+
+for example
+php console.php getAllPostcodes import - imports all postcodes found from the getAllPostcodes method
+
+To save to the database you need to enter your db credentials into the config/Config.php file
+
+
+
+
+
