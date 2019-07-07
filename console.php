@@ -1,15 +1,6 @@
 <?php
 
-require_once 'config/Config.php';
-require_once 'models/DatabaseInterface.php';
-require_once 'models/Database.php';
-require_once 'models/ImportInterface.php';
-require_once 'models/Import.php';
-require_once 'controllers/PostcodeController.php';
-require_once 'models/PostcodeRepositoryInterface.php';
-require_once 'models/RestClientInterface.php';
-require_once 'models/RestClient.php';
-require_once 'models/PostcodeRepository.php';
+require_once 'bootstrap.php';
 
 if (empty($argv) || empty($argv[1]))
 {
@@ -26,8 +17,6 @@ $objPostcodeController = new PostcodeController();
 switch ($method)
 {
     case 'getNearestPostcodesFromLongLat':
-
-        // php console.php getNearestPostcodesFromLongLat -1.647370 50.748600
 
         if (empty($argv[2]) || empty($argv[3]))
         {
@@ -46,8 +35,7 @@ switch ($method)
         break;
 
     case 'getPartial':
-        // php console.php getPartial BH25
-
+        
         if (empty($argv[2]))
         {
 
@@ -66,8 +54,6 @@ switch ($method)
         break;
 
     case 'getAllPostcodes':
-
-        // php console.php getAllPostcodes
 
         $arrPostcodes = $objPostcodeController->getAllPostcodes();
 
